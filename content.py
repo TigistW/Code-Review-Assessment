@@ -43,11 +43,14 @@ def is_valid_parenthesis(givenStr):
     return True
 
 # snippets-4
+
+#accept two numbers and return their multiplicaion
+def multiplication(num1, num2):
+    return num1 *  num2
+
+# increase count variable while function called
+
 count = 0
-
-def abc(x, y):
-    return x * y
-
 def increment_count():
     global count
     count += 1
