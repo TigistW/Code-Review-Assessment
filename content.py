@@ -45,6 +45,7 @@ def is_valid_parenthesis(givenStr):
     return True
 
 
+
 # snippet - 3
 # returns the square of a number
 def get_square(number):
@@ -65,3 +66,21 @@ for number in my_numbers:
 
 # holds the cube values of my_numbers array
 cubes = get_cubes(my_numbers)
+
+# snippets-4
+
+#accept two numbers and return their multiplicaion
+def multiplication(num1, num2):
+    return num1 *  num2
+
+# increase count variable while function called
+
+count = 0
+def increment_count():
+    global count
+    count += 1
+
+increment_count()
+print(count)
+
+
