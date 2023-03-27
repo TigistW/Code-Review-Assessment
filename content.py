@@ -15,23 +15,28 @@ def divide_numbers(a, b):
 # snippets-2
 
 # validates an iterable whether it is a valid parenthesis sequence or not
-def is_valid_parenthesis(s):
+def is_valid_parenthesis(givenStr):
     # define a dictionary that defines the valid parenthesis elements and answer space
-    dc = {
+    hashmap = {
         '(': ')',
           "{": "}",
          '[': ']'
     }
     stack = []
     
-    for i in s:
-        if i in dc.keys(): stack.append(i)
+    '''
+    Looping through the given iterable and whenever finding a closing parenthesis 
+    we will check if its opening parenthesis matches the previous parenthesis and it matches as 
+    defined in the hashmap.
+    
+    '''
+    for elem in givenStr:
+        if elem in hashmap.keys(): stack.append(elem)
         else:
             if len(stack) == 0:
                 return False
-            
-            op = stack.pop()
-            if dc[op] != i:
+            punc = stack.pop()
+            if hashmap[punc] != elem:
                 return False
     if len(stack) != 0:
         return False
