@@ -1,6 +1,8 @@
 # snippet - 1
 # Calculates area of a circle
 import math
+
+
 def calculateArea(radius):
     return math.pi * (radius ** 2)
 
@@ -13,17 +15,16 @@ def divide_numbers(a, b):
     return a / b
 
 # snippets-2
-
 # validates an iterable whether it is a valid parenthesis sequence or not
 def is_valid_parenthesis(givenStr):
     # define a dictionary that defines the valid parenthesis elements and answer space
     hashmap = {
         '(': ')',
-          "{": "}",
-         '[': ']'
+        "{": "}",
+        '[': ']'
     }
     stack = []
-    
+
     '''
     Looping through the given iterable and whenever finding a closing parenthesis 
     we will check if its opening parenthesis matches the previous parenthesis and it matches as 
@@ -31,7 +32,8 @@ def is_valid_parenthesis(givenStr):
     
     '''
     for elem in givenStr:
-        if elem in hashmap.keys(): stack.append(elem)
+        if elem in hashmap.keys():
+            stack.append(elem)
         else:
             if len(stack) == 0:
                 return False
@@ -41,6 +43,29 @@ def is_valid_parenthesis(givenStr):
     if len(stack) != 0:
         return False
     return True
+
+
+
+# snippet - 3
+# returns the square of a number
+def get_square(number):
+    return number ** 2
+
+# returns the cube of each value in the array
+def get_cubes(numbers):
+    cubes = []
+    for number in numbers:
+        cubes.append(number ** 3)
+    return cubes
+
+
+my_numbers = [1, 2, 3, 4, 5]
+squares = []
+for number in my_numbers:
+    squares.append(get_square(number))
+
+# holds the cube values of my_numbers array
+cubes = get_cubes(my_numbers)
 
 # snippets-4
 
@@ -57,3 +82,5 @@ def increment_count():
 
 increment_count()
 print(count)
+
+
